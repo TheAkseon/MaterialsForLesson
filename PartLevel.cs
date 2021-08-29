@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PartLevel : MonoBehaviour
 {
-    [SerializeField] private Transform _begin;
-    [SerializeField] private Transform _end;
+    public Transform _begin;
+    public Transform _end;
 }
