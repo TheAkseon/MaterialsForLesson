@@ -8,6 +8,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private PartLevel[] _partLevels;
     private PartLevel _newPart;
     [SerializeField] private PartLevel _firstPart;
+    private int _visibilityNextPart = 150;
 
     private List<PartLevel> spawnedParts = new List<PartLevel>();
 
@@ -18,7 +19,7 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
-        if (_camera.position.z > spawnedParts[spawnedParts.Count - 1]._end.position.z - 150)
+        if (_camera.position.z > spawnedParts[spawnedParts.Count - 1]._end.position.z - _visibilityNextPart)
         {
             SpawnPart();
         }
